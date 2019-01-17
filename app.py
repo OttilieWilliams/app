@@ -7,7 +7,7 @@ Created on Wed Jan 16 14:42:15 2019
 
 from flask import Flask, render_template, request
 
-app = Flask("MyApp")
+app = Flask(__name__)
 
 @app.route("/")
 def index():

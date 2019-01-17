@@ -14,16 +14,6 @@ def index():
 
     return render_template("index.html")
 
-#@app.route("/contactus")
-#def contactus():
-#    return render_template("contactus.html")
-
-#@app.route("/signup", methods=["POST"])
-#def sign_up():
-#    form_data = request.form
-#    print (form_data["email"])
-#    return "All ok"
-
 @app.route("/confirmation", methods=["POST"])
 def confirmation():
     form_data = request.form
@@ -31,5 +21,5 @@ def confirmation():
     result = "All OK"
     return render_template("confirmation.html", title="Form confirmation", **locals())
 
-app.run(debug=True)
-# Calling run on the app object.
+if _name__ =="__main__":
+    app.run(debug=True)
